@@ -1,0 +1,134 @@
+/* Default CSS */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  background-color: rgb(40, 40, 40);
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Dropdown CSS */
+.dropdown {
+  margin: 5rem;
+}
+
+.dropdown-list {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-list-item,
+.dropdown-submenu-item,
+.dropdown-submenu-2-item {
+  background-color: rgb(30, 185, 140);
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  margin: 0 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  width: 20rem;
+  transition: all 0.2s ease;
+}
+
+.dropdown-list-item::after {
+  content: "";
+  height: 0;
+  width: 0;
+  border-left: 0.8rem solid transparent;
+  border-right: 0.8rem solid transparent;
+  border-top: 0.8rem solid rgb(10, 90, 70);
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+
+.dropdown-submenu,
+.dropdown-submenu-2 {
+  position: absolute;
+  left: 0;
+}
+
+.dropdown-submenu {
+  top: 200%;
+}
+
+.dropdown-submenu::before {
+  content: "";
+  height: 0;
+  width: 0;
+  border-left: 0.8rem solid transparent;
+  border-right: 0.8rem solid transparent;
+  border-top: 0.8rem solid rgb(30, 185, 140);
+  position: absolute;
+  right: 10%;
+  top: -5%;
+  transform: rotate(180deg);
+}
+
+.dropdown-submenu-2 {
+  left: 110%;
+  top: 0;
+}
+
+.dropdown-submenu-2::before {
+  content: "";
+  height: 0;
+  width: 0;
+  border-left: 0.8rem solid transparent;
+  border-right: 0.8rem solid transparent;
+  border-top: 0.8rem solid rgb(30, 185, 140);
+  position: absolute;
+  left: -6%;
+  top: 10%;
+  transform: rotate(90deg);
+}
+
+.dropdown-submenu-item,
+.dropdown-submenu-2-item {
+  margin: 0;
+  border-radius: 0;
+}
+
+.dropdown-submenu-item:first-child,
+.dropdown-submenu-2-item:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.dropdown-submenu-item:last-child,
+.dropdown-submenu-2-item:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.dropdown-list-item:hover,
+.dropdown-submenu-item:hover,
+.dropdown-submenu-2-item:hover {
+  background-color: rgb(10, 140, 110);
+}
