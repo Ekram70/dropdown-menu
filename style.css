@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: transparent;
+}
+
 html {
   font-size: 10px;
 }
@@ -58,7 +62,7 @@ img {
   transition: all 0.2s ease;
 }
 
-.dropdown-list-item::after {
+.dropdown-list-item:hover::after {
   content: "";
   height: 0;
   width: 0;
@@ -75,6 +79,14 @@ img {
 .dropdown-submenu-2 {
   position: absolute;
   left: 0;
+  display: none;
+}
+
+.dropdown-list-item:hover > .dropdown-submenu {
+  display: block;
+}
+.dropdown-submenu-item:hover > .dropdown-submenu-2 {
+  display: block;
 }
 
 .dropdown-submenu {
@@ -131,4 +143,10 @@ img {
 .dropdown-submenu-item:hover,
 .dropdown-submenu-2-item:hover {
   background-color: rgb(10, 140, 110);
+}
+
+/* css for js */
+
+.display-block {
+  display: block;
 }
